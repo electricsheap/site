@@ -1,0 +1,23 @@
+{
+  "name": "port",
+  "version": "0.1.0",
+  "description": "My github site",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/electricsheap/site.git"
+  },
+  "keywords": [
+    "website",
+    "portfolio"
+  ],
+  "author": "Andrew Joshua Cheyney Wilson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/electricsheap/site/issues"
+  },
+  "homepage": "https://github.com/electricsheap/site#readme"
+}
