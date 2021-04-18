@@ -1,0 +1,71 @@
+@font-face {
+    font-family: JetBrains;
+    src: url("../fonts/JetBrains_Mono/JetBrainsMono-VariableFont_wght.ttf");
+}
+@font-face {
+    font-family: Stoke;
+    src: url("../fonts/Stoke/Stoke-Regular.ttf");
+    font-weight: normal;
+}
+@font-face {
+    font-family: StokeLight;
+    src: url("../fonts/Stoke/Stoke-Light.ttf");
+    font-weight: lighter;
+}
+@font-face {
+    font-family: Syne;
+    src: url("../fonts/Syne_Mono/SyneMono-Regular.ttf");
+}
+
+
+:root {
+    --body-color: #f2eec9;
+    --text-color: #58482a;
+    --link-color: #292a3f;
+    --link-after-color: #7f3471;
+    --secondary-text-color: #5c2173;
+    --background-color: #46486d;
+    --navigation-bar-color: #dfd9aa;
+}
+
+
+body {
+    margin: 0px 0px 0px 20px;
+    font-family: Stoke;
+    background-color: var(--body-color);
+    color: var(--text-color);
+}
+
+a {
+    color: var(--link-color);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    align-items: center;
+    flex-grow: 0;
+    flex-shrink: 1;
+}
+
+
+.navbar  {
+    color: var(--text-color);
+}
+
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+
+    margin: 0;
+    padding: 0;
+}
+
+.navbar li {
+    flex: 1 0;
+    text-align: center;
+}
