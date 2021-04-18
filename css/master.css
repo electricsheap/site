@@ -30,7 +30,7 @@
 
 
 body {
-    margin: 0px 0px 0px 20px;
+    margin: 0px 20px 0px 20px;
     font-family: Stoke;
     background-color: var(--body-color);
     color: var(--text-color);
@@ -38,6 +38,10 @@ body {
 
 a {
     color: var(--link-color);
+}
+
+li > a {
+    min-width: max-content;
 }
 
 .container {
@@ -51,6 +55,10 @@ a {
     flex-shrink: 1;
 }
 
+.title {
+    margin: 20px 0px 5px 0px
+}
+
 
 .navbar  {
     color: var(--text-color);
@@ -60,12 +68,18 @@ a {
     list-style-type: none;
     display: flex;
     flex-direction: row;
+    align-items: center;
+    flex
+    height: 60px;
+
 
     margin: 0;
     padding: 0;
 }
 
-.navbar li {
+.nav-tab {
     flex: 1 0;
     text-align: center;
+
+    background-color: var;
 }
