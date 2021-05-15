@@ -1,0 +1,25 @@
+
+
+:root {
+    --body-color: #f2eec9;
+    --text-color: #58482a;
+    --text-color-light: #f2eec9;
+    --link-color: #292a3f;
+    --link-after-color: #7f3471;
+    --secondary-text-color: #5c2173;
+    --background-color: #46486d;
+    --navigation-bar-color: #dfd9aa;
+}
+
+.navbar ul {
+	height: 20px;
+}
+
+.title {
+	font-size: 15pt;
+    margin: 5px 10px 5px 20px;
+}
+
+.subtitle {
+	font-size: 10pt;
+}
