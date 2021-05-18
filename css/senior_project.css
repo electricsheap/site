@@ -17,9 +17,33 @@
 
 .title {
 	font-size: 15pt;
-    margin: 5px 10px 5px 20px;
+    margin: 5px 10px 10px 20px;
 }
-
 .subtitle {
 	font-size: 10pt;
+}
+
+.sp-container {
+    display: flex;
+    flex-flow: column;
+    min-height: 100%;
+}
+
+.sp-header {
+    text-align: center;
+    background-color: #afb0be;
+    color: #171829;
+    padding: 20px 0px 20px 0px;
+}
+
+.sp-body-container {
+    display: flex;
+    background-color: #221f19;
+    flex-flow: row;
+    align-items: center;
+}
+
+.sp-body {
+    flex-grow: 1;
+    flex-shrink: 1
 }
