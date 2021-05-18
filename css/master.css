@@ -65,7 +65,13 @@ button {
 
 .content {
     flex: 1 1 auto;
+    /* align-items: center; */
 }
+
+/* .content > .content-page {
+    background-color: #dfd9aa;
+    min-width: 100px;
+} */
 
 
 .header-container {

@@ -37,13 +37,21 @@
 }
 
 .sp-body-container {
+    flex: 1 1;
     display: flex;
-    background-color: #221f19;
+    background-color: #46486d;
+    color: #afb0be;
     flex-flow: row;
-    align-items: center;
+    justify-content: center;
 }
 
-.sp-body {
-    flex-grow: 1;
-    flex-shrink: 1
+
+div.sp-body {
+    background-color: #afb0be;
+    flex: 0 1 896px;
+    max-width: 90%;
+}
+
+.sp-container h1 {
+
 }
