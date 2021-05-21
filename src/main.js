@@ -6,7 +6,7 @@ document.addEventListener('readystatechange', e => {
 function init() {
     let header = document.querySelector(".header");
     let nav_btn = document.querySelector(".drop-down-btn");
-    let nav_btn_inner = document.querySelector(".btn-inner");
+    let nav_btn_inner = document.querySelector(".drop-down-btn-inner");
     nav_btn.addEventListener("click", e => {
         ;
         let collapse_anim = header.animate([
@@ -30,5 +30,18 @@ function init() {
             header.classList.add("collapsed");
             btn_anim.reverse();
         }
+    });
+    let btns = document.querySelectorAll(".sp-btn");
+    btns.forEach(elm => {
+        let active_color = "#ddd2bd";
+        let default_color = "#b6a991";
+        elm.addEventListener("mouseover", e => {
+            let anim = elm.animate([
+                { background_color: default_color },
+                { background_color: active_color },
+            ], 2000);
+            console.log(elm, anim);
+            anim.play();
+        });
     });
 }

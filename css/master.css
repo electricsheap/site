@@ -52,6 +52,7 @@ button {
     font-family: Stoke;
     font-weight: bold;
     font-size: 12pt;
+    border: none;
 }
 
 .container {
@@ -130,7 +131,7 @@ button {
     /* position: relative; */
 }
 
-.btn-inner {
+.drop-down-btn-inner {
     rotate: 45deg;
     color: var(--text-color-light);
 }
@@ -139,3 +140,4 @@ button {
 .header.collapsed .btn-inner {
     rotate: 0deg;
 }
+
