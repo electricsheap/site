@@ -1,14 +1,14 @@
 
 
 :root {
-    --body-color: #f2eec9;
-    --text-color: #58482a;
-    --text-color-light: #f2eec9;
-    --link-color: #292a3f;
-    --link-after-color: #7f3471;
-    --secondary-text-color: #5c2173;
-    --background-color: #46486d;
-    --navigation-bar-color: #dfd9aa;
+	--body-color: #f2eec9;
+	--text-color: #58482a;
+	--text-color-light: #f2eec9;
+	--link-color: #292a3f;
+	--link-after-color: #7f3471;
+	--secondary-text-color: #5c2173;
+	--background-color: #46486d;
+	--navigation-bar-color: #dfd9aa;
 }
 
 .navbar ul {
@@ -17,72 +17,98 @@
 
 .title {
 	font-size: 15pt;
-    margin: 5px 10px 10px 20px;
+	margin: 5px 10px 10px 20px;
 }
 .subtitle {
 	font-size: 10pt;
 }
 
 .sp-sub {
-    color: var(--text-color-light);
-    font-size: 15pt;
+	color: var(--text-color-light);
+	font-size: 15pt;
 }
 
 .sp-container {
-    display: flex;
-    flex-flow: column;
-    min-height: 100%;
+	display: flex;
+	flex-flow: column;
+	min-height: 100%;
 }
 
 .sp-header {
-    text-align: center;
-    background-color: #afb0be;
-    color: #171829;
-    padding: 20px 0px 20px 0px;
+	text-align: center;
+	background-color: #afb0be;
+	color: #171829;
+	padding: 20px 0px 20px 0px;
 }
 
 .sp-body-container {
-    flex: 1 1;
-    display: flex;
-    background-color: #46486d;
-    color: #232329;
-    flex-flow: row;
-    justify-content: center;
+	flex: 1 1;
+	display: flex;
+	background-color: #46486d;
+	color: #232329;
+	flex-flow: row;
+	justify-content: center;
 }
 
 
 div.sp-body {
-    background-color: #afb0be;
-    flex: 0 1 896px;
-    max-width: 90%;
+	background-color: #afb0be;
+	flex: 0 1 896px;
+	max-width: 90%;
 }
 
 .sp-body-inner {
-    padding: 40px 75px 40px 75px;
+	padding: 40px 75px 40px 75px;
 }
 
 .sp-footer {
-    height: 100px;
-    background-color: #46486d;
+	height: 100px;
+	background-color: #46486d;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 
 .sp-btn {
-    height: 60px;
-    border-width: 3px;
-    border-style: solid;
-    background-color: #b6a991;
-    /* background-color: #ddd2bd; */
+	height: 60px;
+	border-width: 3px;
+	border-style: solid;
+	background-color: #b6a991;
+	/* background-color: #ddd2bd; */
 }
 
 .sp-btn:active {
-    border-color: #504d46;
+	border-color: #504d46;
 }
 
 .sp-btn:hover, .sp-btn:focus, .sp-btn:active {
-    background-color: #ddd2bd;
+	background-color: #ddd2bd;
+}
+
+.img-container {
+	position: fixed; 
+	top: 0px; 
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+}
+
+.img-container > img {
+	max-width: 100%;
+	padding: 10%;
+	width: 80%;
+	opacity: 100%;
+}
+
+
+.img-container\.img-popup-closed {
+	position: relative;
+}
+
+
+.img-container\.img-popup-closed > img {
+	max-width: 100%;
+	height: auto;
 }

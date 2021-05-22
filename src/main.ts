@@ -9,6 +9,9 @@ document.addEventListener('readystatechange', e => {
 
 
 function init() {
+
+	console.log("yes");
+	
 	let header = document.querySelector<HTMLDivElement>(".header");
 	let nav_btn = document.querySelector<HTMLButtonElement>(".drop-down-btn");
 	let nav_btn_inner = document.querySelector<HTMLDivElement>(".drop-down-btn-inner");
@@ -52,6 +55,16 @@ function init() {
 			console.log(elm, anim);
 			
 			anim.play();
+		});
+	});
+
+	let imgs = document.querySelectorAll<HTMLImageElement>(".img-container");
+	imgs.forEach( elm => {
+		console.log(elm);
+		
+		elm.addEventListener("click", ()=>{
+			console.log("clicked")
+			elm.classList.toggle(".img-popup-closed");
 		});
 	});
 }
