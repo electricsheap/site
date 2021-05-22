@@ -4,7 +4,6 @@ document.addEventListener('readystatechange', e => {
     }
 });
 function init() {
-    console.log("yes");
     let header = document.querySelector(".header");
     let nav_btn = document.querySelector(".drop-down-btn");
     let nav_btn_inner = document.querySelector(".drop-down-btn-inner");
@@ -41,16 +40,29 @@ function init() {
                 { background_color: default_color },
                 { background_color: active_color },
             ], 2000);
-            console.log(elm, anim);
             anim.play();
         });
     });
     let imgs = document.querySelectorAll(".img-container");
+    let img_overlays = document.querySelectorAll(".img-overlay-container");
+    console.log(img_overlays);
     imgs.forEach(elm => {
-        console.log(elm);
-        elm.addEventListener("click", () => {
-            console.log("clicked");
-            elm.classList.toggle(".img-popup-closed");
+        let overlay = elm.querySelector(".img-overlay-container");
+        let img = elm.querySelector(".img-small");
+        let anim = overlay.animate([
+            { opacity: "100%" },
+            { opacity: "0%" },
+        ], 50);
+        img.addEventListener("click", () => {
+            anim.reverse();
+            anim.onfinish = undefined;
+            setTimeout(() => overlay.hidden = false, 10);
+        });
+        overlay.addEventListener("click", () => {
+            overlay.getAnimations().forEach(overlay => overlay.cancel());
+            anim.onfinish = () => overlay.hidden = true;
+            anim.reverse();
         });
     });
+    img_overlays.forEach(elm => elm);
 }

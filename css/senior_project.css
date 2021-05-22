@@ -88,27 +88,21 @@ div.sp-body {
 }
 
 .img-container {
-	position: fixed; 
-	top: 0px; 
-	bottom: 0px;
-	left: 0px;
-	right: 0px;
+	position: inherit;
 }
 
 .img-container > img {
 	max-width: 100%;
-	padding: 10%;
-	width: 80%;
-	opacity: 100%;
 }
 
-
-.img-container\.img-popup-closed {
-	position: relative;
+.img-overlay-container {
+	position: fixed;
+	top: 5%;
+	bottom: 5%;
+	left: 5%;
+	right: 5%;
 }
 
-
-.img-container\.img-popup-closed > img {
+.img-overlay-inner {
 	max-width: 100%;
-	height: auto;
 }

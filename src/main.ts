@@ -10,8 +10,8 @@ document.addEventListener('readystatechange', e => {
 
 function init() {
 
-	console.log("yes");
 	
+
 	let header = document.querySelector<HTMLDivElement>(".header");
 	let nav_btn = document.querySelector<HTMLButtonElement>(".drop-down-btn");
 	let nav_btn_inner = document.querySelector<HTMLDivElement>(".drop-down-btn-inner");
@@ -52,19 +52,38 @@ function init() {
 				{background_color: default_color},
 				{background_color: active_color},
 			], 2000 );
-			console.log(elm, anim);
 			
 			anim.play();
 		});
 	});
 
-	let imgs = document.querySelectorAll<HTMLImageElement>(".img-container");
+	let imgs = document.querySelectorAll<HTMLDivElement>(".img-container");
+	let img_overlays = document.querySelectorAll<HTMLDivElement>(".img-overlay-container");
+	console.log(img_overlays);
+	
 	imgs.forEach( elm => {
-		console.log(elm);
+
+		let overlay = elm.querySelector(".img-overlay-container") as HTMLDivElement;
+		let img = elm.querySelector(".img-small") as HTMLImageElement;
 		
-		elm.addEventListener("click", ()=>{
-			console.log("clicked")
-			elm.classList.toggle(".img-popup-closed");
+		let anim = overlay.animate([
+			{opacity: "100%"},
+			{opacity: "0%"},
+		], 50);
+
+		img.addEventListener("click", () => {
+			anim.reverse();
+			anim.onfinish = undefined;
+			setTimeout(()=>overlay.hidden=false, 10);
 		});
+
+
+		overlay.addEventListener("click", ()=>{
+			overlay.getAnimations().forEach(overlay=>overlay.cancel());
+			anim.onfinish = () => overlay.hidden = true;
+			anim.reverse();
+		})
 	});
+
+	img_overlays.forEach( elm=>elm );
 }
