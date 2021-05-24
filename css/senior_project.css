@@ -11,6 +11,20 @@
 	--navigation-bar-color: #dfd9aa;
 }
 
+td {
+	padding-bottom: 10px;
+}
+
+
+tr:first-child > 	td {
+	font-size: 20pt;
+	font-weight: bolder;
+}
+
+td:first-child {
+	font-size: 15pt;
+}
+
 .navbar ul {
 	height: 20px;
 }
@@ -39,6 +53,10 @@
 	background-color: #afb0be;
 	color: #171829;
 	padding: 20px 0px 20px 0px;
+}
+
+.sp-header.smaller > div {
+	display: inline-block;
 }
 
 .sp-body-container {
