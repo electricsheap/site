@@ -93,6 +93,8 @@ div.sp-body {
 	height: 60px;
 	border-width: 3px;
 	border-style: solid;
+
+	margin: 0px 10px 0px 10px;
 	background-color: #b6a991;
 	/* background-color: #ddd2bd; */
 }
@@ -125,8 +127,16 @@ div.sp-body {
 	max-width: 100%;
 }
 
+.sp-body-inner h1 {
+	text-align: center;
+}
+
+.sp-body-inner h2 {
+	margin-left: 15px;
+}
 
 .doc {
 	width: 100%;
-	min-height: 1000px;
+	min-height: 600px;
+	border: solid #171829;
 }
