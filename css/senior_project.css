@@ -124,3 +124,9 @@ div.sp-body {
 .img-overlay-inner {
 	max-width: 100%;
 }
+
+
+.doc {
+	width: 100%;
+	min-height: 1000px;
+}
