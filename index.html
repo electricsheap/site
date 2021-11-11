@@ -5,27 +5,64 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="/site/css/master.css">
-    <link rel="stylesheet" href="/site/css/navbar.css">
     <title>Document</title>
 </head>
 <body>
-    <div class = "container">
-        <div class="header">
-            <h1 class="title">Andrew Wilson</h1>
-            <nav class="navbar"><ul>
-                <li class="nav-tab disabled"><a href="/site/"><button>Home</button></a></li>
-                <li class="nav-tab enabled"><a href="/site/pages/about_me/"><button>About Me</button></a></li>
-                <li class="nav-tab enabled"><a href="/site/pages/resume/"><button>Resume</button></a></li>
-                <li class="nav-tab enabled"><a href="/site/pages/projects/"><button>Projects</button></a></li>
-            </ul></nav>
-        </div>
-        <div class="content">
-            
-        </div>
-        <div class="footer">
+    <h1>Artist Links</h1>
+    <ul>
+        <li>
+            <a href="https://soundcloud.com/electricsheap">soundcloud</a>
+        </li>
+        <li>
+            <a href="https://electricsheap.bandcamp.com/">bandcamp</a>
+        </li>
+        <li>
+            <a href="https://open.spotify.com/artist/7CMB6RhQdidA2k6eJ7zWVi?si=DJ7ED5dUTFeXple9ukUZvQ">spotify</a>
+        </li>
+    </ul>
+    <br>
+    <br>
+    <h1>Releases</h1>
+    <ul class="releases">
+        <li>
+            Music of the Mythos
+            <br>
+            <iframe style="border: 0; width: 350px; height: 470px;" src="https://bandcamp.com/EmbeddedPlayer/album=982479502/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/" seamless><a href="https://electricsheap.bandcamp.com/album/music-of-the-mythos-volume-one">Music of the Mythos - Volume One by AJCW</a></iframe>
+            <br>
+            <div>
+                A collection of music I made for the Monument Mythos webseries. Primarily consists of synthy background music, as well as some of the darker ambience. Also contains a bit of bonus material and lore adjacent content on Side Two. <a href="./src/side_two.zip">Download Side Two for free!</a>
+            </div>
+        </li>
+        <li>
+            Music of the Mythos
+            <br>
+            <iframe style="border: 0; width: 350px; height: 470px;" src="https://bandcamp.com/EmbeddedPlayer/album=982479502/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/" seamless><a href="https://electricsheap.bandcamp.com/album/music-of-the-mythos-volume-one">Music of the Mythos - Volume One by AJCW</a></iframe>
+            <br>
+            <div>
 
-        </div>
-    </div>
+            </div>
+        </li>
+    </ul>
 </body>
+
+
+<style>
+    body {
+        font-family: 'Courier New', Courier, monospace;
+    }
+    h1 {
+        font-size: 30pt;
+
+    }
+    .releases > li {
+        text-align: center;
+        font-size: 15pt;
+        display: inline-block;
+        max-width: 350px;
+        vertical-align: top;
+    }
+    .releases > li > iframe {
+        padding-top: 10px;
+    }
+</style>
 </html>
