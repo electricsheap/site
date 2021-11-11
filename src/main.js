@@ -1,68 +1,62 @@
+
+
+
 document.addEventListener('readystatechange', e => {
-    if (document.readyState == 'complete') {
-        init();
-    }
-});
-function init() {
-    let header = document.querySelector(".header");
-    let nav_btn = document.querySelector(".drop-down-btn");
-    let nav_btn_inner = document.querySelector(".drop-down-btn-inner");
-    nav_btn.addEventListener("click", e => {
-        ;
-        let collapse_anim = header.animate([
-            { top: "-100%" },
-            { top: "0%" },
-        ], {
-            duration: 200,
-            easing: "ease-in"
-        });
-        let btn_anim = nav_btn_inner.animate([
-            { rotate: "0deg" },
-            { rotate: "135deg" },
-        ], 300);
-        if (header.classList.contains("collapsed")) {
-            header.classList.remove("collapsed");
-            collapse_anim.play();
-            btn_anim.play();
-        }
-        else {
-            collapse_anim.reverse();
-            header.classList.add("collapsed");
-            btn_anim.reverse();
-        }
-    });
-    let btns = document.querySelectorAll(".sp-btn");
-    btns.forEach(elm => {
-        let active_color = "#ddd2bd";
-        let default_color = "#b6a991";
-        elm.addEventListener("mouseover", e => {
-            let anim = elm.animate([
-                { background_color: default_color },
-                { background_color: active_color },
-            ], 2000);
-            anim.play();
-        });
-    });
-    let imgs = document.querySelectorAll(".img-container");
-    let img_overlays = document.querySelectorAll(".img-overlay-container");
-    console.log(img_overlays);
-    imgs.forEach(elm => {
-        let overlay = elm.querySelector(".img-overlay-container");
-        let img = elm.querySelector(".img-small");
-        let anim = overlay.animate([
-            { opacity: "100%" },
-            { opacity: "0%" },
-        ], 50);
-        img.addEventListener("click", () => {
-            anim.reverse();
-            anim.onfinish = undefined;
-            setTimeout(() => overlay.hidden = false, 10);
-        });
-        overlay.addEventListener("click", () => {
-            overlay.getAnimations().forEach(overlay => overlay.cancel());
-            anim.onfinish = () => overlay.hidden = true;
-            anim.reverse();
-        });
-    });
-    img_overlays.forEach(elm => elm);
+	if (document.readyState == 'complete') {
+		init();
+	}
+})
+
+let imgs = {
+	"roots": "./src/roots.png"
+}
+
+
+async function init() {
+
+
+	for (key in imgs) {
+		let img = document.createElement("img");
+		let canvas = document.createElement("canvas");
+		img.src = imgs[key];
+		let prom = new Promise((res, rej) => img.onload = res);
+		await prom;
+		imgs[key] = img;
+		canvas.width = img.width;
+		canvas.height = img.height;
+		canvas.getContext("2d").drawImage(img, 0, 0);
+		imgs[key+"_data"] = canvas.getContext('2d').getImageData(0, 0, img.width, img.height);
+	}
+
+
+	let aspect;
+	let canvas = document.querySelector("canvas");
+	let c = canvas.getContext("2d");
+	resize_canvas(canvas);
+	window.onresize = resize_canvas;
+
+	
+
+	frame();
+
+	function frame() {
+		c.clearRect(0, 0, innerWidth, innerHeight);
+		let w = innerHeight/imgs.roots.height * imgs.roots.width;
+		
+		// c.drawImage( imgs.roots, innerWidth/2 - w/2, 0, w, innerHeight );
+	}
+
+	function resize_canvas() {
+		canvas.width = innerWidth;
+		canvas.height = innerHeight;
+		aspect = innerWidth/innerHeight;
+
+		frame();
+	}
+
+	/** @param {HTMLImageElement} img */ 
+	function sample(img) {
+		img.getImg
+	}
+
 }

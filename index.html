@@ -8,51 +8,111 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Artist Links</h1>
-    <ul>
-        <li>
-            <a href="https://soundcloud.com/electricsheap">soundcloud</a>
-        </li>
-        <li>
-            <a href="https://electricsheap.bandcamp.com/">bandcamp</a>
-        </li>
-        <li>
-            <a href="https://open.spotify.com/artist/7CMB6RhQdidA2k6eJ7zWVi?si=DJ7ED5dUTFeXple9ukUZvQ">spotify</a>
-        </li>
-    </ul>
-    <br>
-    <br>
-    <h1>Releases</h1>
-    <ul class="releases">
-        <li>
-            Music of the Mythos
-            <br>
-            <iframe style="border: 0; width: 350px; height: 470px;" src="https://bandcamp.com/EmbeddedPlayer/album=982479502/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/" seamless><a href="https://electricsheap.bandcamp.com/album/music-of-the-mythos-volume-one">Music of the Mythos - Volume One by AJCW</a></iframe>
-            <br>
-            <div>
-                A collection of music I made for the Monument Mythos webseries. Primarily consists of synthy background music, as well as some of the darker ambience. Also contains a bit of bonus material and lore adjacent content on Side Two. <a href="./src/side_two.zip">Download Side Two for free!</a>
-            </div>
-        </li>
-        <li>
-            Music of the Mythos
-            <br>
-            <iframe style="border: 0; width: 350px; height: 470px;" src="https://bandcamp.com/EmbeddedPlayer/album=982479502/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/" seamless><a href="https://electricsheap.bandcamp.com/album/music-of-the-mythos-volume-one">Music of the Mythos - Volume One by AJCW</a></iframe>
-            <br>
-            <div>
+    <canvas></canvas>
 
-            </div>
+    <ul class="main">
+        <li>
+            links
+            <ul class="artist-links">
+                <li>
+                    <a href="https://soundcloud.com/electricsheap">soundcloud</a>
+                </li>
+                <li>
+                    <a href="https://electricsheap.bandcamp.com/">bandcamp</a>
+                </li>
+                <li>
+                    <a href="https://open.spotify.com/artist/7CMB6RhQdidA2k6eJ7zWVi?si=DJ7ED5dUTFeXple9ukUZvQ">spotify</a>
+                </li>
+                <li>
+                    <a href="https://discord.gg/qZ5r2MjVDp ">discord</a>
+                </li>
+            </ul>
         </li>
+        <li>
+            <h1>Releases</h1>
+            <ul class="releases">
+                <li>
+                    Music of the Mythos
+                    <br>
+                    <iframe style="border: 0; width: 350px; height: 470px;" src="https://bandcamp.com/EmbeddedPlayer/album=982479502/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/" seamless><a href="https://electricsheap.bandcamp.com/album/music-of-the-mythos-volume-one">Music of the Mythos - Volume One by AJCW</a></iframe>
+                    <br>
+                    <div>
+                        A collection of music I made for the Monument Mythos webseries. Primarily consists of synthy background music, as well as some of the darker ambience. Also contains a bit of bonus material and lore adjacent content on Side Two. <a href="./src/side_two.zip">Download Side Two for free!</a>
+                    </div>
+                </li>
+                <li>
+                   Creata
+                    <br>
+                    <iframe style="border: 0; width: 350px; height: 470px;" src="https://bandcamp.com/EmbeddedPlayer/album=2501727565/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/" seamless><a href="https://electricsheap.bandcamp.com/album/creata">Creata by AJCW</a></iframe>
+                    <br>
+                    <div>
+                        An album made for a tabletop rpg I GMed a few years ago. I never got to finish it because of covid, but I made some cool songs for it, so here they are! Most of them are loopable format.
+                    </div>
+                </li>
+                <li>
+                   Bullhog
+                    <br>
+                    <iframe style="border: 0; width: 350px; height: 442px;" src="https://bandcamp.com/EmbeddedPlayer/track=3876576942/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/" seamless><a href="https://electricsheap.bandcamp.com/track/bullhog">Bullhog by Andrew Wilson</a></iframe>
+                    <br>
+                    <div>
+                        A single for an upcoming album "All Your Care." Currently finish it up. More info soon!
+                    </div>
+                </li>
+
+                <li>
+                    Bullhog
+                    <br>
+                    <iframe style="border: 0; width: 350px; height: 470px;" src="https://bandcamp.com/EmbeddedPlayer/album=958475969/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/" seamless><a href="https://electricsheap.bandcamp.com/album/juneau">Juneau by Andrew Wilson</a></iframe>
+                    <br>
+                    <div>
+                        An older EP of mine. One of the first cohesive projects I have ever released more officially. Recently went and slightly remaster the tracks for streaming platforms.
+                    </div>
+                </li>
+ 
+                
+            </ul>
+        </li>
+
     </ul>
 </body>
 
 <style>
     body {
         font-family: 'Courier New', Courier, monospace;
+        /* overflow-y: hidden; */
     }
+
+    canvas {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+
     h1 {
         font-size: 30pt;
 
     }
+
+    .main {
+        white-space: nowrap;
+        list-style: none;
+    }
+
+    .main > li {
+        /* display: inline-block; */
+        /* vertical-align: top; */
+        white-space: normal;
+    }
+
+    .artist-links {
+
+    }
+
+    .artist-links > li {
+        display: inline-block;
+    }
+
     .releases > li {
         text-align: center;
         font-size: 15pt;
@@ -64,4 +124,7 @@
         padding-top: 10px;
     }
 </style>
+
+<script src="./src/SimplexNoise.js"></script>
+<script src="./src/main.js"></script>
 </html>
