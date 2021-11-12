@@ -66,7 +66,7 @@ async function init() {
 		c.fillStyle = "rgba(5, 5, 5, 0.85)";
 		c.fillRect(0, 0, innerWidth, innerHeight);
 	}
-	setInterval( frame, 50);
+	setInterval( frame, 100);
 
 	function resize_canvas() {
 		canvas.width = innerWidth;
