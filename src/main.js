@@ -63,7 +63,7 @@ async function init() {
 				c.fillRect(y*p, x*p, p, p);
 			}
 		}
-		c.fillStyle = "rgba(5, 5, 5, 0.93)";
+		c.fillStyle = "rgba(5, 5, 5, 0.90)";
 		c.fillRect(0, 0, innerWidth, innerHeight);
 	}
 	setInterval( frame, 50);
