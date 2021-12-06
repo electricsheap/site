@@ -1,11 +1,22 @@
 
 
 
-document.addEventListener('readystatechange', e => {
-	if (document.readyState == 'complete') {
-		init();
+document.addEventListener('readystatechange', ()=>{
+	switch (document.readyState) {
+		case 'complete': console.log("complete"); 
+			document.body.style.visibility = "visible";
+
+			init_document();
+
+			break;
+		case 'interactive': console.log("interative"); 
+			init_canvas();
+
+			break;
 	}
 })
+
+
 
 let imgs = {
 	"roots": "./src/roots.png"
@@ -18,7 +29,60 @@ let aspect;
 let canvas;
 let c;
 
-async function init() {
+
+function init_document() {
+	let list_elms_header = Array.from(document.querySelectorAll(".main > li > span"));
+
+	list_elms_header.forEach(elm=>{
+		let par = elm.parentElement;
+		let body = elm.nextElementSibling;
+		console.log(elm);
+		elm.onclick = ()=>{
+			console.log("hello");
+			toggle_collapse(body)
+		}
+	})
+
+}
+
+function toggle_collapse(elm = document.createElement("div")) {
+	let reversed = !elm.classList.toggle("collapsed");
+	console.log(reversed);
+	let anim = new Animation();
+	if (!elm.anim) {
+		elm.anim = elm.animate([
+			{ 
+				"height": `${elm.clientHeight}px`,
+				"scale": "100% 100%"
+			},
+			{ 
+				"height": "0px",
+				"scale": "100% 0%" 
+			}
+		],
+		{
+		"duration": 100,
+		})
+		elm.anim.child_anims = Array.from(elm.children)
+		.map(child=> {
+			child.animate()
+		})
+	}
+	
+	anim = elm.anim;
+
+	if (reversed) {
+		anim.playbackRate = -1;
+		anim.play();
+	} else {
+		anim.playbackRate = 1;
+		anim.play();
+	}
+
+}
+
+
+async function init_canvas() {
 
 
 	for (key in imgs) {
@@ -91,5 +155,4 @@ async function init() {
 	window.sample = sample;
 
 }
-
 
