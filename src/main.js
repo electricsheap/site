@@ -61,7 +61,7 @@ function toggle_collapse(elm = document.createElement("div")) {
 			}
 		],
 		{
-		"duration": 100,
+		"duration": 0,
 		})
 		elm.anim.child_anims = Array.from(elm.children)
 		.map(child=> {
