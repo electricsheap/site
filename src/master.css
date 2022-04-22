@@ -16,8 +16,13 @@ ul {
 }
 
 
+a {
+    color: rgb(125, 160, 239);
+}
+
+
 a:visited {
-    color: rgb(170, 79, 223)
+    color: rgb(196, 133, 233)
 }
 
 canvas {
