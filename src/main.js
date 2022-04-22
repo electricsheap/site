@@ -3,15 +3,12 @@ const cursors = ["alias","all-scroll","auto","cell","context-menu","col-resize",
 
 document.addEventListener('readystatechange', ()=>{
 	switch (document.readyState) {
-		case 'complete': {
-			// console.clear();
-			console.log("complete"); 
-			init_document();
-		} break;
 		case 'interactive': {
+			// console.clear();
+			init_canvas();
+			init_document();
 			console.log("interative"); 
 			document.body.style.visibility = "visible";
-			init_canvas();
 		} break;
 	}
 })
