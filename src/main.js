@@ -31,53 +31,30 @@ let c;
 
 
 function init_document() {
-	let list_elms_header = Array.from(document.querySelectorAll(".main > li > span"));
 
-	list_elms_header.forEach(elm=>{
-		let par = elm.parentElement;
-		let body = elm.nextElementSibling;
-		console.log(elm);
-		elm.onclick = ()=>{
-			console.log("hello");
-			toggle_collapse(body)
+	const name_label = document.querySelector(".cursor-spam");
+	let cursor_change = () => {
+		name_label.style.cursor = cursors[ Math.floor( Math.random() * cursors.length ) ];
+	}
+	const interval = setInterval(cursor_change, 150);
+
+
+
+	let content_bodies = Array.from(document.querySelectorAll(".content-body-list > li"))
+	let body_dict = {};
+	content_bodies.forEach( elm => body_dict[elm.dataset.content] = elm );
+
+	let nav_btns = Array.from(document.querySelectorAll(".navbar > ul > li"));
+
+	nav_btns.forEach(elm=>{
+		const body = body_dict[elm.dataset.content];
+		elm.onclick = () => {
+			nav_btns.forEach( elm => elm.classList.remove("selected"));
+			elm.classList.add("selected");
+			content_bodies.forEach( elm => elm.classList.add("hidden"));
+			body.classList.remove("hidden");
 		}
 	})
-
-}
-
-function toggle_collapse(elm = document.createElement("div")) {
-	let reversed = !elm.classList.toggle("collapsed");
-	console.log(reversed);
-	let anim = new Animation();
-	if (!elm.anim) {
-		elm.anim = elm.animate([
-			{ 
-				"height": `${elm.clientHeight}px`,
-				"scale": "100% 100%"
-			},
-			{ 
-				"height": "0px",
-				"scale": "100% 0%" 
-			}
-		],
-		{
-		"duration": 0,
-		})
-		elm.anim.child_anims = Array.from(elm.children)
-		.map(child=> {
-			child.animate()
-		})
-	}
-	
-	anim = elm.anim;
-
-	if (reversed) {
-		anim.playbackRate = -1;
-		anim.play();
-	} else {
-		anim.playbackRate = 1;
-		anim.play();
-	}
 
 }
 
@@ -104,20 +81,26 @@ async function init_canvas() {
 	c = canvas.getContext("2d");
 	resize_canvas(canvas);
 	window.onresize = resize_canvas;
-
+	// canvas.style.backgroundColor = "rgba(0, 0, 0)";
+	// canvas.style.opacity = "5%";
 	
 
 	frame();
 	function frame() {
-		c.clearRect(0, 0, innerWidth, innerHeight);
+		// if ( Math.random() < 0.9 ) return;
+		// c.clearRect(0, 0, innerWidth, innerHeight);
+		// c.fillStyle = "rgba(5, 5, 5, 1.0)";
+		// c.fillRect(0, 0, innerWidth, innerHeight);
 		let w = innerHeight/imgs.roots.height * imgs.roots.width;
-		
+		const numpix = 2500
 
-		let p = Math.floor(innerWidth/75)
+		
+		let p = Math.floor(Math.sqrt( innerWidth*innerHeight / numpix ));
 		let img_scale = 10; 
 		let t = 0.1
 		for (let y = 0; y < innerWidth / p; y++) {
 			for (let x = 0; x < innerHeight / p; x++) {
+				// if ( Math.random() < 0.1 ) continue;
 				let UV = {x: img_scale * x/innerWidth, y: img_scale * y/(aspect*innerHeight)}
 				let noise = n1.noise3D( UV.x * 1, UV.y * 1, t*Date.now()/1500 ) + n1.noise3D( UV.x * 4, UV.y * 4, t*Date.now()/500 )/6;
 
@@ -127,10 +110,8 @@ async function init_canvas() {
 				c.fillRect(y*p, x*p, p, p);
 			}
 		}
-		c.fillStyle = "rgba(5, 5, 5, 0.85)";
-		c.fillRect(0, 0, innerWidth, innerHeight);
 	}
-	setInterval( frame, 100);
+	setInterval( frame, 110 );
 
 	function resize_canvas() {
 		canvas.width = innerWidth;

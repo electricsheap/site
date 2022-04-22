@@ -1,0 +1,109 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+    /* overflow-y: hidden; */
+    color: white;
+    background-color: rgb(5, 5, 5);
+
+    visibility: hidden;
+}
+
+a {
+    cursor: crosshair;
+}
+
+ul {
+    list-style: none;
+}
+
+
+a:visited {
+    color: rgb(170, 79, 223)
+}
+
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 15%;
+}
+
+h1 {
+    font-size: 30pt;
+}
+
+.main {
+    list-style: none;
+}
+
+.links > * {
+    display: inline-block;
+    padding-left: 0;
+}
+
+.links-list {
+    padding-right: 15px;
+}
+
+.links-list > li {
+    display: inline-block;
+}
+
+
+.navbar .nav-btn {
+    display: inline-block;
+    padding: 0px 20px;
+    font-size: 40px;
+    font-weight: 100;
+
+    cursor: crosshair;
+
+}
+
+.nav-btn::selection {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.nav-btn.selected {
+    font-weight: bold;
+}
+
+.content-body-list {
+    display: list-item;
+}
+
+.content-body-list > li.hidden {
+    visibility: hidden;
+    max-height: 0px;
+}
+
+.about {
+
+}
+
+.about h1 {
+    font-weight: normal;
+}
+
+.releases {
+    display: inline-block;
+}
+
+.releases li {
+    text-align: center;
+    font-size: 15pt;
+    display: inline-block;
+    max-width: 350px;
+    vertical-align: top;
+    padding-bottom: 30px;
+
+}
+
+
+.releases li div {
+    max-width: 350px;
+}
+
+.releases li > iframe {
+    padding-top: 10px;
+}
