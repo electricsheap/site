@@ -83,7 +83,12 @@ h1 {
 }
 
 .about {
+    max-width: 75%;
+    min-width: 500px;
+}
 
+.about p {
+    font-size: 20px;
 }
 
 .about h1 {
