@@ -1,25 +1,25 @@
 
-
+const cursors = ["alias","all-scroll","auto","cell","context-menu","col-resize","copy","crosshair","default","e-resize","ew-resize","grab","grabbing","help","move","n-resize","ne-resize","nesw-resize","ns-resize","nw-resize","nwse-resize","no-drop","none","not-allowed","pointer","progress","row-resize","s-resize","se-resize","sw-resize","text","vertical-text","w-resize","wait","zoom-in","zoom-o"];
 
 document.addEventListener('readystatechange', ()=>{
 	switch (document.readyState) {
-		case 'complete': console.log("complete"); 
-			document.body.style.visibility = "visible";
-
+		case 'complete': {
+			// console.clear();
+			console.log("complete"); 
 			init_document();
-
-			break;
-		case 'interactive': console.log("interative"); 
+		} break;
+		case 'interactive': {
+			console.log("interative"); 
+			document.body.style.visibility = "visible";
 			init_canvas();
-
-			break;
+		} break;
 	}
 })
 
 
 
 let imgs = {
-	"roots": "./src/roots.png"
+	"roots": "/site/src/roots.png"
 }
 
 
@@ -32,12 +32,13 @@ let c;
 
 function init_document() {
 
-	const name_label = document.querySelector(".cursor-spam");
+	const cursor_elms = document.querySelectorAll(".cursor-spam");
 	let cursor_change = () => {
-		name_label.style.cursor = cursors[ Math.floor( Math.random() * cursors.length ) ];
+		cursor_elms.forEach( elm => {
+			elm.style.cursor = cursors[ Math.floor( Math.random() * cursors.length ) ];
+		})
 	}
 	const interval = setInterval(cursor_change, 150);
-
 
 
 	let content_bodies = Array.from(document.querySelectorAll(".content-body-list > li"))
@@ -77,10 +78,10 @@ async function init_canvas() {
 
 
 	aspect;
-	canvas = document.querySelector("canvas");
+	canvas = document.querySelector("canvas#bg");
 	c = canvas.getContext("2d");
 	resize_canvas(canvas);
-	window.onresize = resize_canvas;
+	window.addEventListener("resize", ()=>{resize_canvas(canvas); frame()});
 	// canvas.style.backgroundColor = "rgba(0, 0, 0)";
 	// canvas.style.opacity = "5%";
 	
@@ -88,15 +89,13 @@ async function init_canvas() {
 	frame();
 	function frame() {
 		// if ( Math.random() < 0.9 ) return;
-		// c.clearRect(0, 0, innerWidth, innerHeight);
-		// c.fillStyle = "rgba(5, 5, 5, 1.0)";
-		// c.fillRect(0, 0, innerWidth, innerHeight);
+		c.clearRect(0, 0, innerWidth, innerHeight);
 		let w = innerHeight/imgs.roots.height * imgs.roots.width;
 		const numpix = 2500
 
 		
 		let p = Math.floor(Math.sqrt( innerWidth*innerHeight / numpix ));
-		let img_scale = 10; 
+		window.img_scale = 10 // + Number(window.sum) * 10; 
 		let t = 0.1
 		for (let y = 0; y < innerWidth / p; y++) {
 			for (let x = 0; x < innerHeight / p; x++) {
@@ -110,16 +109,16 @@ async function init_canvas() {
 				c.fillRect(y*p, x*p, p, p);
 			}
 		}
+
+		
+		c.fillStyle = "rgba(5, 5, 5, 0.85)";
+		c.fillRect(0, 0, innerWidth, innerHeight);
 	}
+
+
 	setInterval( frame, 110 );
 
-	function resize_canvas() {
-		canvas.width = innerWidth;
-		canvas.height = innerHeight;
-		aspect = innerWidth/innerHeight;
 
-		frame();
-	}
 
 	/** @param {HTMLImageElement} img */
 	function sample(img, x, y) {
@@ -137,3 +136,8 @@ async function init_canvas() {
 
 }
 
+function resize_canvas(canvas) {
+	canvas.width = innerWidth;
+	canvas.height = innerHeight;
+	aspect = innerWidth/innerHeight;
+}

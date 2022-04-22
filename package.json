@@ -2,8 +2,9 @@
   "name": "port",
   "version": "0.1.0",
   "description": "My github site",
-  "main": "index.js",
+  "main": "build.js",
   "scripts": {
+    "build": "node ./build.js; git add *file.json; ",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
