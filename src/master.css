@@ -42,9 +42,18 @@ h1 {
     list-style: none;
 }
 
+
+#name-label {
+    margin: 0px;
+}
+
 .links > * {
     display: inline-block;
     padding-left: 0;
+}
+
+.links-list {
+    margin: 0px;
 }
 
 .links-list > li {
@@ -82,7 +91,6 @@ h1 {
 
 .about {
     max-width: 75%;
-    min-width: 500px;
 }
 
 .about p {
@@ -119,7 +127,7 @@ h1 {
 .bc-embed {
     border: 0; 
     width: 350px; 
-    height: 470px;
+    min-height: 470px;
 }
 
 
@@ -171,6 +179,48 @@ h1 {
 
     .bc-embed {
         width: 233px;
-        height: 375px;
+        min-height: 340px;
+    }
+}
+
+
+@media (max-width: 550px) {
+
+    .links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .links > * {
+        display: block;
+
+    }
+
+    .nav-btn {
+        font-size: 17pt;
+        padding: 0px 10px;
+    }
+
+    .about {
+        max-width: fit-content;
+    }
+
+    .about h1 {
+        font-size: 20pt;
+    }
+
+    .about p {
+        font-size: 17px;
+    }
+
+    .bc-desc {
+        text-align: center;
+    }
+
+    .bc-container  {
+        flex-flow: column nowrap;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 20px;
     }
 }
