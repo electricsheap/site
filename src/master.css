@@ -13,6 +13,7 @@ a {
 
 ul {
     list-style: none;
+    padding-left: 5px;
 }
 
 
@@ -46,16 +47,13 @@ h1 {
     padding-left: 0;
 }
 
-.links-list {
-    padding-right: 15px;
-}
-
 .links-list > li {
     display: inline-block;
 }
 
 
-.navbar .nav-btn {
+
+.nav-btn {
     display: inline-block;
     padding: 0px 20px;
     font-size: 40px;
@@ -110,10 +108,69 @@ h1 {
 }
 
 
-.releases li div {
+.bc-desc {
     max-width: 350px;
 }
 
 .releases li > iframe {
     padding-top: 10px;
+}
+
+.bc-embed {
+    border: 0; 
+    width: 350px; 
+    height: 470px;
+}
+
+
+
+
+
+
+@media (max-width: 800px) {
+    li.link-header {
+        display: none;
+    }
+
+    .navbar > ul {
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+    }
+
+    .nav-btn {
+        font-size: 25pt;
+        flex-grow: 1;
+    }
+
+    .releases {
+        display: flex;
+        flex-direction: column;
+        justify-self: center;
+        flex-wrap: wrap;
+    }
+
+    .releases li {
+        max-width: 100%;
+        width: 100%;
+    }
+    
+    .bc-container  {
+        padding-top: 25px;
+        display: flex;
+        flex-flow: row nowrap;
+        min-width: 100%;
+    }
+
+    .bc-desc {
+        max-width: fit-content;
+        flex-grow: 2;
+        text-align: left;
+        padding: 25px 25px 0px 25px;
+    }
+
+    .bc-embed {
+        width: 233px;
+        height: 375px;
+    }
 }
