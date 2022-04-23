@@ -13,7 +13,7 @@ a {
 
 ul {
     list-style: none;
-    padding-left: 5px;
+    padding: 0px 5px 0px 5px;
 }
 
 
@@ -86,11 +86,13 @@ h1 {
 
 .content-body-list > li.hidden {
     visibility: hidden;
+    display: none;
     max-height: 0px;
 }
 
 .about {
     max-width: 75%;
+    min-width: 530px;
 }
 
 .about p {
@@ -164,7 +166,6 @@ h1 {
     }
     
     .bc-container  {
-        padding-top: 25px;
         display: flex;
         flex-flow: row nowrap;
         min-width: 100%;
@@ -179,7 +180,8 @@ h1 {
 
     .bc-embed {
         width: 233px;
-        min-height: 340px;
+        min-height: 233px;
+        height: 233px;
     }
 }
 
@@ -202,7 +204,8 @@ h1 {
     }
 
     .about {
-        max-width: fit-content;
+        max-width: 100%;
+        min-width: 0px;
     }
 
     .about h1 {
