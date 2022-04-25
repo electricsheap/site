@@ -15,6 +15,21 @@ document.addEventListener('readystatechange', ()=>{
 
 
 
+let str = `<li>
+<a href="{album-url}">
+progshit
+</a>
+
+<div class="bc-container">
+	<iframe class="bc-embed" src="https://bandcamp.com/EmbeddedPlayer/album={album-code}/size=large/bgcol=333333/linkcol=0f91ff/tracklist=false/transparent=true/" seamless><a href="{album-url}">progshit by AJCW, SkylarDB</a></iframe>
+	
+	<div class="bc-desc">
+	{album-desc}
+	</div>
+</div>
+</li>`
+
+
 let imgs = {
 	"roots": "/site/src/roots.png"
 }
