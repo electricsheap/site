@@ -1,8 +1,9 @@
-
+"use strict";
 
 var spect_scale = 10;
-window.scalefunc = bin => 
-                        (bin+30) * 10 - innerHeight/5
+window.scalefunc = function (bin) {
+    return (bin+30) * 10 - innerHeight/5;
+}
 
 document.onreadystatechange = () => {
     if (document.readyState === "interactive")
@@ -13,9 +14,8 @@ document.onreadystatechange = () => {
         })
         document.getElementById("list").innerHTML = str;
 
-        let ac = new AudioContext;
-        window. analyser = ac.createAnalyser();
-        analyser
+        let ac = new (window.AudioContext || window.webkitAudioContext)();
+        window.analyser = ac.createAnalyser();
         analyser.fftSize = 128 * 2
         analyser.smoothingTimeConstant = 0.5;
         // analyser.connect(ac.destination);
@@ -55,7 +55,7 @@ document.onreadystatechange = () => {
                 c.fillStyle = "rgba(150,150,150,1.0)";
                  // 1.1 * (1-Math.pow(0.1, bin))
 
-                bin_scaled = scalefunc(bin);
+                let bin_scaled = scalefunc(bin);
 
                 let p = Math.ceil(innerWidth/bin_count);
 
