@@ -44,6 +44,19 @@ let c;
 
 function init_document() {
 
+	/** @type {HTMLAnchorElement[]} */
+	const links = Array.from(document.querySelectorAll(".links-list a"))
+	links.forEach(async link => {
+		let ico = link.innerHTML;
+		let img = new Image()
+		img.src = "src/ico/" + ico.trim().toLowerCase() + ".ico"
+		link.innerHTML = img.outerHTML
+		// fetch("https://favicongrabber.com/api/grab/" + new URL(link.href).host)
+		// .then(resp=> resp.json())
+		// .then(json=> window.open(json.icons[0].src))
+	})
+
+
 	const cursor_elms = document.querySelectorAll(".cursor-spam");
 	let cursor_change = () => {
 		cursor_elms.forEach( elm => {

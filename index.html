@@ -1,262 +1,307 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="/site/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="src/master.css">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="/site/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="src/master.css">
+	<link rel="stylesheet" href="src/credits.css">
+	<link rel="stylesheet" href="src/releases.css">
+	
 
-    
-
-    <script src="./src/SimplexNoise.js"></script>
-    <script src="./src/main.js"></script>
-    <title>AJCW</title>
+	<script src="./src/SimplexNoise.js"></script>
+	<script src="./src/main.js"></script>
+	<title>AJCW</title>
 </head>
 <body>
-    
-    <canvas id="bg"></canvas>
-    <div class="main">
-        <!-- links -->
-        <div class="links">
-            <h2 id="name-label" class="cursor-spam" style="padding-right: 20px;">~$ AJCW</h2>
-            <ul class="links-list">
-                <li class="link-header">--buy</li>
-                <li>
-                    <a href="https://electricsheap.bandcamp.com/">bandcamp</a>
-                </li>
-                <li class="link-header">--listen</li>
-                <li>
-                    <a href="https://soundcloud.com/electricsheap">soundcloud</a>
-                </li>
-                <li>
-                    <a href="https://open.spotify.com/artist/7CMB6RhQdidA2k6eJ7zWVi?si=DJ7ED5dUTFeXple9ukUZvQ">spotify</a>
-                </li>
-                <li class="link-header">--socials</li>
-                <li>
-                    <a href="https://discord.gg/zaCsNesc ">discord</a>
-                </li>
-                <li style="cursor: help;" onclick="location='./something'">-?</li>
-            </ul>
-        </div>
-        <!-- content -->
-        <div>
-            <!-- navbar -->
-            <nav class="navbar"><ul>
-                <li class="nav-btn" data-content="about">About</li>
-                <li class="nav-btn selected" data-content="releases">Releases</li>
-                <li class="nav-btn" data-content="credits">Credits</li>
-            </ul></nav>
-            <ul class="content-body-list">
-                <li class="" data-content="releases"><ul class="releases">
-                        <li>
-                            <a href="https://electricsheap.bandcamp.com/album/progshit">
-                            progshit
-                            </a>
-                            
-                            <div class="bc-container">
-                                <iframe class="bc-embed" src="https://bandcamp.com/EmbeddedPlayer/album=1690344499/size=large/bgcol=333333/linkcol=0f91ff/tracklist=false/transparent=true/" seamless><a href="https://electricsheap.bandcamp.com/album/progshit">progshit by AJCW, SkylarDB</a></iframe>
-                                
-                                <div class="bc-desc">
-                                    This single has been in the making for <a href="src/log.png">almost three years.</a> After many additions, we had a fourteen-minute track, which could better be described as five songs forcibly compiled into one beast of a track. <a href="https://linktr.ee/SkylarDB">View more <em>Skunky Business (TM)</em> here!</a>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <a href="https://electricsheap.bandcamp.com/track/wonderland-single">
-                            WONDERLAND  
-                            </a>
+	
+	<canvas id="bg"></canvas>
+	<div class="main">
+		<!-- links -->
+		<div class="links">
+			<h2 id="name-label" class="cursor-spam" style="padding-right: 20px;">~$ AJCW</h2>
+			<ul class="links-list">
+				<li class="link-header">--buy</li>
+				<li>
+					<a href="https://electricsheap.bandcamp.com/">bandcamp</a>
+				</li>
+				<li class="link-header">--listen</li>
+				<li><a href="https://soundcloud.com/electricsheap">soundcloud</a></li>
+				<li>
+					<a href="https://open.spotify.com/artist/7CMB6RhQdidA2k6eJ7zWVi?si=DJ7ED5dUTFeXple9ukUZvQ">spotify</a>
+				</li>
+				<li><a href="https://music.youtube.com/channel/UCry4Na53d7Y5z_eGvv2okrw">ytmusic</a></li>
+				<li class="link-header">--socials</li>
+				<li><a href="https://discord.gg/pgzYP55hA7">discord</a></li>
+				<li><a href="https://www.twitch.tv/ajcw_tv">twitch</a></li>
+				<li><a href="https://www.youtube.com/channel/UCry4Na53d7Y5z_eGvv2okrw">youtube</a></li>
+				<li style="cursor: help;" onclick="location='./something'">-?</li>
+			</ul>
+		</div>
+		<!-- content -->
+		<div>
+			<!-- navbar -->
+			<nav class="navbar"><ul>
+				<li class="nav-btn" data-content="about">About</li>
+				<li class="nav-btn selected" data-content="releases">Releases</li>
+				<li class="nav-btn" data-content="credits">Credits</li>
+			</ul></nav>
+			<ul class="content-body-list">
+				<li class="" data-content="releases"><ul class="releases">
+					<li>
+						<a href="https://electricsheap.bandcamp.com/track/repass">
+						Repass
+						</a>
+						
+						<div class="bc-container">
+							<iframe class="bc-embed" src="https://bandcamp.com/EmbeddedPlayer/track=1337030623/size=large/bgcol=333333/linkcol=0f91ff/tracklist=false/transparent=true/" seamless><a href="https://electricsheap.bandcamp.com/track/repass">Repass by AJCW</a></iframe>
 
-                            <div class="bc-container">
-                                <iframe class="bc-embed" src="https://bandcamp.com/EmbeddedPlayer/track=568938664/size=large/bgcol=333333/linkcol=0f91ff/tracklist=false/transparent=true/" seamless><a href="https://electricsheap.bandcamp.com/track/wonderland-single">WONDERLAND - Single by AJCW</a></iframe>
-                                <div class="bc-desc">
-                                    The music of <em>Wonderland...</em>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <a href="https://electricsheap.bandcamp.com/album/music-of-the-mythos-volume-one">
-                            Music of the Mythos
-                            </a>
+							
+							<div class="bc-desc">
+								A short ambient track I made for Alex Kister's <em>Mandela Catalog Vol. 333</em>.
+							</div>
+						</div>
+					</li>
+					<li>
+						<a href="https://electricsheap.bandcamp.com/album/pax-britannica-teslas-lullaby">
+						Tesla's Lullaby
+						</a>
+						
+						<div class="bc-container">
+							<iframe class="bc-embed" src="https://bandcamp.com/EmbeddedPlayer/album=2219029338/size=large/bgcol=333333/linkcol=0f91ff/tracklist=false/transparent=true/" seamless><a href="https://electricsheap.bandcamp.com/album/pax-britannica-teslas-lullaby">Pax Britannica - Tesla's Lullaby by AJCW</a></iframe>
+							
+							<div class="bc-desc">
+								This is a short album I made for a mod to the game Hearts of Iron. The mod takes place in an alternate timeline, in which the invention of wireless electricity causes science to advance at a much different pace. Although the songs do not play over any specific scenes, I tried to tell some sort of a story.  
+							</div>
+						</div>
+					</li>
+					<li>
+						<a href="https://electricsheap.bandcamp.com/album/progshit">
+						progshit
+						</a>
+						
+						<div class="bc-container">
+							<iframe class="bc-embed" src="https://bandcamp.com/EmbeddedPlayer/album=1690344499/size=large/bgcol=333333/linkcol=0f91ff/tracklist=false/transparent=true/" seamless><a href="https://electricsheap.bandcamp.com/album/progshit">progshit by AJCW, SkylarDB</a></iframe>
+							
+							<div class="bc-desc">
+								This single has been in the making for <a href="src/log.png">almost three years.</a> After many additions, we had a fourteen-minute track, which could better be described as five songs forcibly compiled into one beast of a track. <a href="https://linktr.ee/SkylarDB">View more <em>Skunky Business (TM)</em> here!</a>
+							</div>
+						</div>
+					</li>
+					<li>
+						<a href="https://electricsheap.bandcamp.com/track/wonderland-single">
+						WONDERLAND  
+						</a>
 
-                            <div class="bc-container">
-                                <iframe class="bc-embed" src="https://bandcamp.com/EmbeddedPlayer/album=982479502/size=large/bgcol=333333/linkcol=0f91ff/tracklist=false/transparent=true/" seamless><a href="https://electricsheap.bandcamp.com/album/music-of-the-mythos-volume-one">Music of the Mythos - Volume One by AJCW</a></iframe>
-                                <div class="bc-desc">
-                                    A collection of music I made for the Monument Mythos webseries. Primarily consists of synthy background music, as well as some of the darker ambience. Also contains a bit of bonus material and lore adjacent content on Side Two. <a href="https://mega.nz/folder/LowGDAAZ#U_oF6HhK4Zao-k66xGWCbw">Download Side Two for free!</a>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <a href="https://electricsheap.bandcamp.com/album/creata">
-                            Creata
-                            </a>
+						<div class="bc-container">
+							<iframe class="bc-embed" src="https://bandcamp.com/EmbeddedPlayer/track=568938664/size=large/bgcol=333333/linkcol=0f91ff/tracklist=false/transparent=true/" seamless><a href="https://electricsheap.bandcamp.com/track/wonderland-single">WONDERLAND - Single by AJCW</a></iframe>
+							<div class="bc-desc">
+								The music of <em>Wonderland...</em>
+							</div>
+						</div>
+					</li>
+					<li>
+						<a href="https://electricsheap.bandcamp.com/album/music-of-the-mythos-volume-one">
+						Music of the Mythos
+						</a>
 
-                            <div class="bc-container">
-                                <iframe class="bc-embed" src="https://bandcamp.com/EmbeddedPlayer/album=2501727565/size=large/bgcol=333333/linkcol=0f91ff/tracklist=false/transparent=true/" seamless><a href="https://electricsheap.bandcamp.com/album/creata">Creata by AJCW</a></iframe>
-                                <div class="bc-desc">
-                                    An album made for a tabletop rpg I GMed a few years ago. I never got to finish it because of covid, but I made some cool songs for it, so here they are! Most of them are loopable format.
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <a href="https://electricsheap.bandcamp.com/track/bullhog">
-                            Bullhog
-                            </a>
+						<div class="bc-container">
+							<iframe class="bc-embed" src="https://bandcamp.com/EmbeddedPlayer/album=982479502/size=large/bgcol=333333/linkcol=0f91ff/tracklist=false/transparent=true/" seamless><a href="https://electricsheap.bandcamp.com/album/music-of-the-mythos-volume-one">Music of the Mythos - Volume One by AJCW</a></iframe>
+							<div class="bc-desc">
+								A collection of music I made for the Monument Mythos webseries. Primarily consists of synthy background music, as well as some darker ambience. Also contains a bit of bonus material and lore adjacent content on Side Two. <a href="https://mega.nz/folder/LowGDAAZ#U_oF6HhK4Zao-k66xGWCbw">Download Side Two for free!</a>
+							</div>
+						</div>
+					</li>
+					<li>
+						<a href="https://electricsheap.bandcamp.com/album/creata">
+						Creata
+						</a>
 
-                            <div class="bc-container">
-                                <iframe class="bc-embed" src="https://bandcamp.com/EmbeddedPlayer/track=3876576942/size=large/bgcol=333333/linkcol=0f91ff/tracklist=false/transparent=true/" seamless><a href="https://electricsheap.bandcamp.com/track/bullhog">Bullhog by Andrew Wilson</a></iframe>
-                                <div class="bc-desc">
-                                    A single for an upcoming album "All Your Care." Currently finishing it up. More info soon!
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <a href="https://electricsheap.bandcamp.com/album/juneau">
-                            Juneau
-                            </a>
+						<div class="bc-container">
+							<iframe class="bc-embed" src="https://bandcamp.com/EmbeddedPlayer/album=2501727565/size=large/bgcol=333333/linkcol=0f91ff/tracklist=false/transparent=true/" seamless><a href="https://electricsheap.bandcamp.com/album/creata">Creata by AJCW</a></iframe>
+							<div class="bc-desc">
+								An album made for a tabletop rpg I GMed a few years ago. I never got to finish it because of covid, but I made some cool songs for, so here they are! Most of them are in a loopable format.
+							</div>
+						</div>
+					</li>
+					<li>
+						<a href="https://electricsheap.bandcamp.com/track/bullhog">
+						Bullhog
+						</a>
 
-                            <div class="bc-container">
-                                <iframe class="bc-embed" src="https://bandcamp.com/EmbeddedPlayer/album=958475969/size=large/bgcol=010101/linkcol=0687f5/tracklist=false/transparent=true/" seamless><a href="https://electricsheap.bandcamp.com/album/juneau">Juneau by Andrew Wilson</a></iframe>
-                                <div class="bc-desc">
-                                    An older EP of mine. One of the first cohesive projects I have ever released officially. Recently went back and remastered it slightly for streaming platforms.
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <a href="https://electricsheap.bandcamp.com/album/the-ongoing-collection">
-                            The Ongoing Collection
-                            </a>
+						<div class="bc-container">
+							<iframe class="bc-embed" src="https://bandcamp.com/EmbeddedPlayer/track=3876576942/size=large/bgcol=333333/linkcol=0f91ff/tracklist=false/transparent=true/" seamless><a href="https://electricsheap.bandcamp.com/track/bullhog">Bullhog by Andrew Wilson</a></iframe>
+							<div class="bc-desc">
+								A single for an upcoming album "All Your Care." Currently in development. More info soon!
+							</div>
+						</div>
+					</li>
+					<li>
+						<a href="https://electricsheap.bandcamp.com/album/juneau">
+						Juneau
+						</a>
 
-                            <div class="bc-container">
-                                <iframe class="bc-embed" src="https://bandcamp.com/EmbeddedPlayer/album=614697151/size=large/bgcol=010101/linkcol=0687f5/tracklist=false/transparent=true/" seamless><a href="https://electricsheap.bandcamp.com/album/the-ongoing-collection">The Ongoing Collection by AJCW</a></iframe>
-                                <div class="bc-desc">
-                                    I first made this album when I ran out of upload space on my SoundCloud account. My plan was to continue to add to this album as I made new music. For that reason, this album is pretty much a perfect sliver of that period of my musical career.
-                                </div>
-                            </div>
-                        </li>                        
-                        <li>
-                            <a href="https://electricsheap.bandcamp.com/album/sage">
-                            Sage
-                            </a>
+						<div class="bc-container">
+							<iframe class="bc-embed" src="https://bandcamp.com/EmbeddedPlayer/album=958475969/size=large/bgcol=010101/linkcol=0687f5/tracklist=false/transparent=true/" seamless><a href="https://electricsheap.bandcamp.com/album/juneau">Juneau by Andrew Wilson</a></iframe>
+							<div class="bc-desc">
+								An older EP of mine. One of the first cohesive projects I have ever released officially. Recently went back and remastered it slightly for streaming platforms.
+							</div>
+						</div>
+					</li>
+					<li>
+						<a href="https://electricsheap.bandcamp.com/album/the-ongoing-collection">
+						The Ongoing Collection
+						</a>
 
-                            <div class="bc-container">
-                                <iframe class="bc-embed" src="https://bandcamp.com/EmbeddedPlayer/album=2995823446/size=large/bgcol=010101/linkcol=0687f5/tracklist=false/transparent=true/" seamless><a href="https://electricsheap.bandcamp.com/album/sage">Sage by AJCW</a></iframe>
-                                <div class="bc-desc">
-                                    Even before the Monument Mythos or the House in the Ocean, Alex Casanas made a lot of sort film. Throughout middle and high school, I would give him music to use in said films. This album is a collection of the best of those songs up until its release. I honestly do not how each song was used, or what they were for, but I'm glad I made them!
-                                </div>
-                            </div>
-                        </li>                        
-                        <li>
-                            <a href="https://electricsheap.bandcamp.com/track/rdwr">
-                            rdwr
-                            </a>
+						<div class="bc-container">
+							<iframe class="bc-embed" src="https://bandcamp.com/EmbeddedPlayer/album=614697151/size=large/bgcol=010101/linkcol=0687f5/tracklist=false/transparent=true/" seamless><a href="https://electricsheap.bandcamp.com/album/the-ongoing-collection">The Ongoing Collection by AJCW</a></iframe>
+							<div class="bc-desc">
+								I first made this album when I ran out of upload space on my SoundCloud account. My plan was to continue to add to this album as I made new music. For that reason, this album is pretty much a perfect sliver of that period of my musical career.
+							</div>
+						</div>
+					</li>                        
+					<li>
+						<a href="https://electricsheap.bandcamp.com/album/sage">
+						Sage
+						</a>
 
-                            <div class="bc-container">
-                                
-                                <iframe class="bc-embed" src="https://bandcamp.com/EmbeddedPlayer/track=1219777074/size=large/bgcol=010101/linkcol=0687f5/tracklist=false/transparent=true/" seamless><a href="https://electricsheap.bandcamp.com/track/rdwr">rdwr by AJCW</a></iframe>
-                                <div class="bc-desc">
-                                    A fun little tech/industrial song. I had originally made this song back in 9th grade, but only got around to finishing it senior year. I'm glad I did though, as its still a favorite of mine.
-                                </div>
-                            </div>
-                        </li>                        
-                        <li>
-                            <a href="https://electricsheap.bandcamp.com/album/several-songs">
-                            several songs
-                            </a>
+						<div class="bc-container">
+							<iframe class="bc-embed" src="https://bandcamp.com/EmbeddedPlayer/album=2995823446/size=large/bgcol=010101/linkcol=0687f5/tracklist=false/transparent=true/" seamless><a href="https://electricsheap.bandcamp.com/album/sage">Sage by AJCW</a></iframe>
+							<div class="bc-desc">
+								Even before the Monument Mythos or the House in the Ocean, Alex Casanas made a lot of sort films. Throughout middle and high school, I would give him music to use in said films. This album is a collection of the best of those songs up until its release. I honestly do not how each song was used, or what they were for, but I'm glad I made them!
+							</div>
+						</div>
+					</li>                        
+					<li>
+						<a href="https://electricsheap.bandcamp.com/track/rdwr">
+						rdwr
+						</a>
 
-                            <div class="bc-container">
-                                <iframe class="bc-embed" src="https://bandcamp.com/EmbeddedPlayer/album=2973923163/size=large/bgcol=010101/linkcol=0687f5/tracklist=false/transparent=true/" seamless><a href="https://electricsheap.bandcamp.com/album/several-songs">several songs by AJCW</a></iframe>
-                                <div class="bc-desc">
-                                    This is a short album I made in a weeks time, one song a day. I had originally planned to continue for much longer, but I gave up. What I did manage to make in that time was actually very nice. Some experimental stuff in here. 
-                                </div>
-                            </div>
-                        </li>                        
-                        <li>
-                            <a href="https://electricsheap.bandcamp.com/track/random-access">
-                            random access
-                            </a>
+						<div class="bc-container">
+							
+							<iframe class="bc-embed" src="https://bandcamp.com/EmbeddedPlayer/track=1219777074/size=large/bgcol=010101/linkcol=0687f5/tracklist=false/transparent=true/" seamless><a href="https://electricsheap.bandcamp.com/track/rdwr">rdwr by AJCW</a></iframe>
+							<div class="bc-desc">
+								A fun little tech/industrial song. I had originally made this song back in 9th grade, but only got around to finishing it senior year. I'm glad I did though, as its still a favorite of mine.
+							</div>
+						</div>
+					</li>                        
+					<li>
+						<a href="https://electricsheap.bandcamp.com/album/several-songs">
+						several songs
+						</a>
 
-                            <div class="bc-container">
-                                <iframe class="bc-embed" src="https://bandcamp.com/EmbeddedPlayer/track=3595770815/size=large/bgcol=010101/linkcol=0687f5/tracklist=false/transparent=true/" seamless><a href="https://electricsheap.bandcamp.com/track/random-access">random access by AJCW</a></iframe>
-                                <div class="bc-desc">
-                                    I made this song using various sounds produced from randomizing the parameters on several default Ableton Live instruments. The result is intentionally unkempt. I like weird and unorganized art. 
-                                </div>
-                            </div>
-                        </li>                        
-                        <li>
-                            <a href="https://electricsheap.bandcamp.com/track/even-odd-remix">
-                            Even Odd Remix
-                            </a>
+						<div class="bc-container">
+							<iframe class="bc-embed" src="https://bandcamp.com/EmbeddedPlayer/album=2973923163/size=large/bgcol=010101/linkcol=0687f5/tracklist=false/transparent=true/" seamless><a href="https://electricsheap.bandcamp.com/album/several-songs">several songs by AJCW</a></iframe>
+							<div class="bc-desc">
+								This is a short album I made in a weeks time, one song a day. I had originally planned to continue for much longer, but I gave up. What I did manage to make in that time was actually very nice. There is some experimental stuff in here. 
+							</div>
+						</div>
+					</li>                        
+					<li>
+						<a href="https://electricsheap.bandcamp.com/track/random-access">
+						random access
+						</a>
 
-                            <div class="bc-container">
-                                <iframe class="bc-embed" src="https://bandcamp.com/EmbeddedPlayer/track=2600772977/size=large/bgcol=010101/linkcol=0687f5/tracklist=false/transparent=true/" seamless><a href="https://electricsheap.bandcamp.com/track/even-odd-remix">Even Odd Remix by C1D, Andrew Wilson</a></iframe>
-                                <div class="bc-desc">
-                                    A remix of the song "Even Odd" by C1D. I met C1D on the C418 community discord, and I love his style! This song in particular stuck out to be because of its interesting chord patterns and odd-bar rhythms.
-                                </div>
-                            </div>
-                        </li>          
-                </ul></li>
-                
-                <li class="hidden" data-content="about"><div class="about">
+						<div class="bc-container">
+							<iframe class="bc-embed" src="https://bandcamp.com/EmbeddedPlayer/track=3595770815/size=large/bgcol=010101/linkcol=0687f5/tracklist=false/transparent=true/" seamless><a href="https://electricsheap.bandcamp.com/track/random-access">random access by AJCW</a></iframe>
+							<div class="bc-desc">
+								I made this song using various sounds produced from randomizing the parameters on several default Ableton Live instruments. The result is intentionally unkempt. I like weird and unorganized art. 
+							</div>
+						</div>
+					</li>                        
+					<li>
+						<a href="https://electricsheap.bandcamp.com/track/even-odd-remix">
+						Even Odd Remix
+						</a>
+
+						<div class="bc-container">
+							<iframe class="bc-embed" src="https://bandcamp.com/EmbeddedPlayer/track=2600772977/size=large/bgcol=010101/linkcol=0687f5/tracklist=false/transparent=true/" seamless><a href="https://electricsheap.bandcamp.com/track/even-odd-remix">Even Odd Remix by C1D, Andrew Wilson</a></iframe>
+							<div class="bc-desc">
+								A remix of the song "Even Odd" by C1D. I met C1D on the C418 community discord, and I love his style! Even Odd stuck out to me, due of its interesting chord patterns and odd rhythms.
+							</div>
+						</div>
+					</li>          
+				</ul></li>
+				
+				<li class="hidden" data-content="about"><div class="about">
 <h1> <em>about me ...</em> </h1>
 <p>
-    Andrew Wilson goes by many names online, primarily due to his indecisiveness. Some of these aliases include chronologic_error, chr_err, electric_sheap, andrew_man. Nowadays, he uses the alias "AJCW"; he likes that one the best!
+	Andrew Wilson goes by many names online, primarily due to his indecisiveness. Some of these aliases include chronologic_error, chr_err, electric_sheap, andrew_man. Nowadays, he uses the alias "AJCW"; he likes that one the best!
 </p>
 <p>
-    Regardless of superficial titles and labels, Andrew has had a passion for making music since the eighth grade! After a few months of posting his music to SoundCloud, he had saved enough money to purchase his first and primary DAW, Ableton Live.
+	Despite any indecisiveness with his title, Andrew was confident in his passion for making music since the eighth grade! Starting out using a free program called SoundTrap, Andrew would post his first songs to SoundCloud. Eventually he had saved enough money to purchase his first and primary DAW, Ableton Live.
 </p>
 <p>
-    Around this time, Andrew's good friend Alex Casanas had been delving into filmmaking, and needed music! Alongside this, he was integrating himself into a community of producers in the C418 discord server, collaborating and contributing to several remix challenges. Some of these early influences are still reflected in his music today, as these opportunities gave Andrew an artistic direction he would need to truly develop his production style.
+	Around this time, Andrew's good friend Alex Casanas had been delving into filmmaking, and needed music! Alongside this, he was integrating himself into a various communities of producers in the C418 discord server. These factors ignited Andrew's passion for collaboration. Other than this, Andrew has many other inspirations. He has always enjoyed the raw melodic emotion in many deadmau5 tracks. The mau5's dedication to sound-design-from-scratch gave Andrew an early advantage in the realm of sound design and audio engineering as a whole. Andrew has also adopted the textural tendencies seen in music by Chris Clark, Aphex Twin, and Mr. Bill. However, let's not discount Andrew's love for Video Game soundtracks and their influence. Game OSTs such as Rain World (James Primate), Minecraft (C418), Outer Wilds (Andrew Prahlow), Undertale (Toby Fox), and Celeste (Lena Raine), have forever impacted how Andrew creates music for all forms of visual media.
 </p>
 <p>
-    Other than this, Andrew has many other inspirations. He has always enjoyed the raw melodic emotion in many tracks deadmau5 tracks. The mau5's dedication to sound-design-from-scratch gave Andrew an early advantage in the realm of sound design and audio engineering as a whole. Andrew has adopted the textural tendencies seen in music by Chris Clark, Aphex Twin, and Mr. Bill. However, let's not discount Andrew's love for Video Game soundtracks and their influence. Game OSTs such as Rain World (James Primate), Minecraft (C418), Outer Wilds (Andrew Prahlow), Undertale (Toby Fox), and Celeste (Lena Raine), have forever impacted how Andrew creates music for all forms of visual mediums.
+	Today, Andrew is channeling his creative efforts primarily on collaborative projects. He works with multiple amateurs filmmakers (many in the youtube horror scene) and a few indie games. That being said, he is hard at work on his stand-alone studio album: All Your Care. More singles will release as the album approaches completion!
 </p>
-<p>
-    Today, Andrew is channeling his creative efforts primarily on collaborative projects. He works with multiple amateurs filmmakers (many in the youtube horror scene), a few video game modders, and even on a few indie games. That being said, he is hard at work on his stand-alone studio album: All Your Care. More singles will release as the album approaches completion!
-</p>
+<p><em>Written by Andrew Wilson, talking about himself in the third person.</em></p>
 
 
-                </div></li>
-                
-                <li class="hidden" data-content="credits"><div class="credits">
-                    under construction
-                    <h1>Monument Mythos</h1>
-                    <p>
-                        <ul>
-                            <li>
-                                Background music in several episodes.
-                            </li>
-                            <li>
-                                Slight audio engineering in several episodes.
-                            </li>
-                        </ul>
-                    </p>
-                    <h1>Mandela Catalog vol. 333</h1>
-                    <p>
-                        <ul>
-                            <li>
-                                Background music
-                            </li>
-                        </ul>
-                    </p>
-                    <h1>Maze Ablaze</h1>
-                    <p>
-                        <ul>
-                            <li>
-                                Original Soundtrack
-                            </li>
-                            <li>Light audio engineering</li>
-                        </ul>
-                    </p>
-                    <!--
-                        div
+				</div></li>
+				
+				<li class="hidden" data-content="credits"><div class="credits">
+					<ul class="credits">
+						<li>
+							
+							<a href="https://www.youtube.com/c/MISTERMANTICORE/">
+								<h2>Monument Mythos</h2>
+							</a>
+							
+							<div class="credits-container">
+								<img class="credits-image" src="./src/mythos_img.jpg" alt="">
+								
+								<div class="credits-desc"><ul>
+
+								</ul><ul>
+									<li>Background music in <a href="https://youtube.com/playlist?list=PLz0D13dPMKFmd7uVHyQgCFxbWvfCx32vh">several episodes</a></li>
+									<li>Audio engineering in several episodes</li>
+								</ul></div>
+							</div>
+						</li>
+						<li>
+							
+							<a href="https://www.youtube.com/c/MandelaCatalogue">
+								<h2>Mandela Catalogue</h2>
+							</a>
+							
+							<div class="credits-container">
+								<img class="credits-image" src="./src/mandela333.jpg" alt="">
+								
+								<div class="credits-desc"><ul>
+									<li>Background music (Vol.333)</li>
+								</ul>
+								</div>
+							</div>
+						</li>
+						<li>
+							<!-- <a href="https://www.youtube.com/c/MandelaCatalogue"> -->
+								<h2>Maze Ablaze</h2>
+							<!-- </a> -->
+							
+							<div class="credits-container">
+								<img class="credits-image" src="./src/maze_ablaze.png" alt="">
+								
+								<div class="credits-desc"><ul>
+									<li>Background music</li>
+									<li>SFX</li>
+								</ul>
+								</div>
+							</div>
+						</li>
+					</ul>
+					<!--
+						div
 
 
 
-                    -->
-                </div></li>
-            </ul>
-        </div>
-    </div>
+					-->
+				</div></li>
+			</ul>
+		</div>
+	</div>
 </body>
 </html>
