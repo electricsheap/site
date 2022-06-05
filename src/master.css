@@ -75,6 +75,10 @@ h1 {
 
 }
 
+.level-two .nav-btn {
+    font-size: 30px;
+}
+
 .nav-btn::selection {
     background-color: rgba(0, 0, 0, 0);
 }
@@ -83,15 +87,17 @@ h1 {
     font-weight: bold;
 }
 
-.content-body-list {
+.nav-body {
     display: list-item;
 }
 
-.content-body-list > li.hidden {
+.nav-body > li.hidden {
     visibility: hidden;
     display: none;
     max-height: 0px;
 }
+
+
 
 .about {
     max-width: 75%;
@@ -128,6 +134,11 @@ h1 {
         flex-grow: 1;
     }
 
+    
+    .level-two .nav-btn {
+        font-size: 20px;
+    }
+
 }
 
 
@@ -146,6 +157,10 @@ h1 {
     .nav-btn {
         font-size: 17pt;
         padding: 0px 10px;
+    }
+    
+    .level-two .nav-btn {
+        font-size: 17px;
     }
 
     .about {

@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="shortcut icon" href="/site/favicon.ico" type="image/x-icon">
 	<link rel="stylesheet" href="src/master.css">
-	<link rel="stylesheet" href="src/credits.css">
+	<link rel="stylesheet" href="src/coms.css">
 	<link rel="stylesheet" href="src/releases.css">
 	
 
@@ -42,12 +42,12 @@
 		<!-- content -->
 		<div>
 			<!-- navbar -->
-			<nav class="navbar"><ul>
+			<nav class="navbar" data-nav-id="main"><ul>
 				<li class="nav-btn" data-content="about">About</li>
 				<li class="nav-btn selected" data-content="releases">Releases</li>
-				<li class="nav-btn" data-content="credits">Credits</li>
+				<li class="nav-btn" data-content="coms">Coms</li>
 			</ul></nav>
-			<ul class="content-body-list">
+			<ul class="nav-body" data-nav-id="main">
 				<li class="" data-content="releases"><ul class="releases">
 					<li>
 						<a href="https://electricsheap.bandcamp.com/track/repass">
@@ -243,55 +243,97 @@
 
 				</div></li>
 				
-				<li class="hidden" data-content="credits"><div class="credits">
-					<ul class="credits">
-						<li>
-							
-							<a href="https://www.youtube.com/c/MISTERMANTICORE/">
-								<h2>Monument Mythos</h2>
-							</a>
-							
-							<div class="credits-container">
-								<img class="credits-image" src="./src/mythos_img.jpg" alt="">
+				<li class="hidden" data-content="coms"><div class="coms">
+					<p><em>
+						submit commissions on <a href="https://discord.gg/pgzYP55hA7">discord</a> or at <a href="mailto:ajcw.music@gmail.com">ajcw.music@gmail.com</a>
+					</em></p>
+					<!-- navbar -->
+					<nav class="navbar level-two" data-nav-id="coms"><ul>
+						<li class="nav-btn" data-content="pricing">Prices</li>
+						<li class="nav-btn" data-content="pre-made">Pre-made</li>
+						<li class="nav-btn" data-content="credits">Credits</li>
+					</ul></nav>
+					<ul class="nav-body" data-nav-id="coms">
+						<li class="hidden" data-content="pricing"><div class="pricing">
+							<h3><strong>ambient drone: </strong><em>$25</em></h3>
+							<p>
+								any reasonable length, as long as it doesn't need to dramatically evolve. you may, of course, give specification / example tracks for your desired sound.
+								<div class="example">
+									<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1134399667&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+								</div>
+							</p>
+							<br/>
+							<h3><strong>ambient drone evolving: </strong><em>$35</em></h3>
+							<p>
+								for tracks which change significantly over the course of 2+ minutes.
+								<div class="example">
+									<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/628598148&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+								</div>
+							</p>
+							<br/>
+							<h3><strong>ambient melodic: </strong><em>$35 for 2 minutes</em></h3>
+							<p>
+								for ambient tracks which contain melodic progressions beyond just a few notes. The line between this and drone can be a bit blurry at times, and I will typically be lenient. However, most of the time, you know if this is what you want against drone. each extra minute is $5.
+								<div class="example">
+									<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1151665351&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+								</div>
+							</p>
+							<br>
+							<h3><strong>other: </strong><em>$XX</em></h3>
+							<p>
+								I don't feel confident enough in many other broad genres to morally take commission atm. That being said, if you have a specific request based of track you've heard from me in the past, or just want to try me, shoot me a request and I can give you a pricing.
+							</p>
+						</div></li>
+						<li class="hidden" data-content="pre-made"></li>
+						<li class="hidden" data-content="credits"><ul class="credits">
+							<li>
 								
-								<div class="credits-desc"><ul>
+								<a href="https://www.youtube.com/c/MISTERMANTICORE/">
+									<h2>Monument Mythos</h2>
+								</a>
+								
+								<div class="credits-container">
+									<img class="credits-image" src="./src/mythos_img.jpg" alt="">
+									
+									<div class="credits-desc"><ul>
 
-								</ul><ul>
-									<li>Background music in <a href="https://youtube.com/playlist?list=PLz0D13dPMKFmd7uVHyQgCFxbWvfCx32vh">several episodes</a></li>
-									<li>Audio engineering in several episodes</li>
-								</ul></div>
-							</div>
-						</li>
-						<li>
-							
-							<a href="https://www.youtube.com/c/MandelaCatalogue">
-								<h2>Mandela Catalogue</h2>
-							</a>
-							
-							<div class="credits-container">
-								<img class="credits-image" src="./src/mandela333.jpg" alt="">
-								
-								<div class="credits-desc"><ul>
-									<li>Background music (Vol.333)</li>
-								</ul>
+									</ul><ul>
+										<li>Background music in <a href="https://youtube.com/playlist?list=PLz0D13dPMKFmd7uVHyQgCFxbWvfCx32vh">several episodes</a></li>
+										<li>Audio engineering in several episodes</li>
+									</ul></div>
 								</div>
-							</div>
-						</li>
-						<li>
-							<!-- <a href="https://www.youtube.com/c/MandelaCatalogue"> -->
-								<h2>Maze Ablaze</h2>
-							<!-- </a> -->
-							
-							<div class="credits-container">
-								<img class="credits-image" src="./src/maze_ablaze.png" alt="">
+							</li>
+							<li>
 								
-								<div class="credits-desc"><ul>
-									<li>Background music</li>
-									<li>SFX</li>
-								</ul>
+								<a href="https://www.youtube.com/c/MandelaCatalogue">
+									<h2>Mandela Catalogue</h2>
+								</a>
+								
+								<div class="credits-container">
+									<img class="credits-image" src="./src/mandela333.jpg" alt="">
+									
+									<div class="credits-desc"><ul>
+										<li>Background music (Vol.333)</li>
+									</ul>
+									</div>
 								</div>
-							</div>
-						</li>
+							</li>
+							<li>
+								<!-- <a href="https://www.youtube.com/c/MandelaCatalogue"> -->
+									<h2>Maze Ablaze</h2>
+								<!-- </a> -->
+								
+								<div class="credits-container">
+									<img class="credits-image" src="./src/maze_ablaze.png" alt="">
+									
+									<div class="credits-desc"><ul>
+										<li>Background music</li>
+										<li>SFX</li>
+									</ul>
+									</div>
+								</div>
+							</li>
+						</ul></li>
 					</ul>
 					<!--
 						div

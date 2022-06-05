@@ -65,22 +65,29 @@ function init_document() {
 	}
 	const interval = setInterval(cursor_change, 150);
 
-
-	let content_bodies = Array.from(document.querySelectorAll(".content-body-list > li"))
-	let body_dict = {};
-	content_bodies.forEach( elm => body_dict[elm.dataset.content] = elm );
-
-	let nav_btns = Array.from(document.querySelectorAll(".navbar > ul > li"));
-
-	nav_btns.forEach(elm=>{
-		const body = body_dict[elm.dataset.content];
-		elm.onclick = () => {
-			nav_btns.forEach( elm => elm.classList.remove("selected"));
-			elm.classList.add("selected");
-			content_bodies.forEach( elm => elm.classList.add("hidden"));
-			body.classList.remove("hidden");
+	for ( let navBar of document.querySelectorAll("nav.navbar[data-nav-id]")) {
+		let navId = navBar.dataset.navId
+		let navBody = document.querySelector(`ul.nav-body[data-nav-id="${navId}"]`)
+		if (!navBody) {
+			console.warn(`nav-bar with id ${navId} has no pair.`)
+			continue
 		}
-	})
+
+		let navTabs = navBar.querySelectorAll("li.nav-btn")
+		for ( let tab of navTabs ) {
+			tab.onclick = ()=>{
+				for ( let otherTab of navTabs )
+					otherTab.classList.remove("selected")
+				tab.classList.add("selected")
+				for ( let child of navBody.children ) {
+					if ( child.dataset.content == tab.dataset.content ) {
+						child.classList.remove("hidden")
+					} else child.classList.add("hidden")
+				}
+			}
+		}
+	}
+
 
 }
 

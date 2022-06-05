@@ -1,5 +1,9 @@
 
 
+.pricing {
+    max-width: 750px;
+}
+
 .credits {
     display: inline-block;
     flex-direction: column;
