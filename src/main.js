@@ -112,14 +112,15 @@ async function init_canvas() {
 	aspect;
 	canvas = document.querySelector("canvas#bg");
 	c = canvas.getContext("2d");
-	resize_canvas(canvas);
-	window.addEventListener("resize", ()=>{resize_canvas(canvas); frame()});
+	// resize_canvas(canvas);
+	// window.addEventListener("resize", ()=>{resize_canvas(canvas); frame()});
 	// canvas.style.backgroundColor = "rgba(0, 0, 0)";
 	// canvas.style.opacity = "5%";
 	
 
 	frame();
 	function frame() {
+		resize_canvas(canvas)
 		// if ( Math.random() < 0.9 ) return;
 		c.clearRect(0, 0, innerWidth, innerHeight);
 		let w = innerHeight/imgs.roots.height * imgs.roots.width;
@@ -135,7 +136,7 @@ async function init_canvas() {
 				let UV = {x: img_scale * x/innerWidth, y: img_scale * y/(aspect*innerHeight)}
 				let noise = n1.noise3D( UV.x * 1, UV.y * 1, t*Date.now()/1500 ) + n1.noise3D( UV.x * 4, UV.y * 4, t*Date.now()/500 )/6;
 
-				let img_x = noise;
+				let img_x = (noise + 1.) * 0.5;
 				let img_y = Math.sin(UV.y);
 				c.fillStyle = sample(imgs.roots, img_x, img_y);
 				c.fillRect(y*p, x*p, p, p);
@@ -154,7 +155,7 @@ async function init_canvas() {
 
 	/** @param {HTMLImageElement} img */
 	function sample(img, x, y) {
-		x = Math.abs(x % aspect- 0.03);
+		x = Math.abs(x % 1.0);
 		y = Math.abs(y % 1.0);
 
 		x = Math.floor(x * img.width);
