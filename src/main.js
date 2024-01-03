@@ -1,18 +1,13 @@
 
 const cursors = ["alias","all-scroll","auto","cell","context-menu","col-resize","copy","crosshair","default","e-resize","ew-resize","grab","grabbing","help","move","n-resize","ne-resize","nesw-resize","ns-resize","nw-resize","nwse-resize","no-drop","none","not-allowed","pointer","progress","row-resize","s-resize","se-resize","sw-resize","text","vertical-text","w-resize","wait","zoom-in","zoom-o"];
 
-document.addEventListener('readystatechange', ()=>{
-
-	switch (document.readyState) {
-		case 'interactive': {
-			// console.clear();
-			init_canvas();
-			init_document();
-			console.log("interative"); 
-			document.body.style.visibility = "visible";
-		} break;
-	}
-})
+document.addEventListener("readystatechange", () => {
+	// if (document.readyState == "interactive") return;
+	// init_canvas();
+	init_document();
+	console.log("interative"); 
+	document.body.style.visibility = "visible";
+});
 
 
 
@@ -43,7 +38,6 @@ let canvas;
 let c;
 
 function init_document() {
-
 	/** @type {HTMLAnchorElement[]} */
 	const links = Array.from(document.querySelectorAll(".links-list a"))
 	links.forEach(async link => {
@@ -93,23 +87,24 @@ function init_document() {
 
 
 async function init_canvas() {
-
-
+	debugger
 	for (key in imgs) {
 		let img = document.createElement("img");
 		let canvas = document.createElement("canvas");
-		img.src = imgs[key];
 		let prom = new Promise((res, rej) => img.onload = res);
-		await prom;
+		img.src = imgs[key];
+		img.onload = () => {
+			canvas.width = img.width;
+			canvas.height = img.height;
+			canvas.getContext("2d").drawImage(img, 0, 0);
+			imgs[key]["data"] = canvas.getContext('2d').getImageData(0, 0, img.width, img.height);
+		}
 		imgs[key] = img;
-		canvas.width = img.width;
-		canvas.height = img.height;
-		canvas.getContext("2d").drawImage(img, 0, 0);
-		imgs[key]["data"] = canvas.getContext('2d').getImageData(0, 0, img.width, img.height);
 	}
 
 
 	aspect;
+	debugger
 	canvas = document.querySelector("canvas#bg");
 	c = canvas.getContext("2d");
 	// resize_canvas(canvas);
