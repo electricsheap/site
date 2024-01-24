@@ -1,1 +1,23 @@
-const file_names = {"files":["angel remix v2.mp3","angel remix v4.mp3","aphex win 2.flac","big_hud1.mp3","cool vc song.flac","Dream Running Music Remix.flac","elivated.flac","flushed down.flac","frontward facing extended.flac","Global Aid Dot Eu.flac","Good Riddance Remix.flac","Hades wip.wav.flac","joe's wierd adventure.flac","Joey Slowy.flac","Joey.flac","Joseph.flac","Juneau Remix.flac","Lowtime.flac","one hour bit (one minute.flac","pax2.flac","pax3.flac","skylar.flac","SLM.flac","spot.mp3","summertime.flac","Time Sort.flac","wd_brush.mp3"]}
+const file_names = 
+{"files": [
+"condensed milk heaven.flac",
+"cool vc song.flac",
+"crap.flac",
+"disapointed.flac",
+"Dream Running Music Remix.flac",
+"drugs drugs charles.flac",
+"elivated.flac",
+"flushed down.flac",
+"Global Aid Dot Eu.flac",
+"Good Riddance Remix.flac",
+"Hades wip.wav.flac",
+"joe's wierd adventure.flac",
+"Joey Slowy.flac",
+"Joey.flac",
+"Joseph.flac",
+"Juneau Remix.flac",
+"left behind.flac",
+"Lowtime.flac",
+"one hour bit (one minute.flac",
+"SLM.flac"
+]}

@@ -2,3 +2,4 @@
 ./src/*.js
 .zip
 .ignore*
+*flight info.txt
