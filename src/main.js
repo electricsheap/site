@@ -87,7 +87,6 @@ function init_document() {
 
 
 async function init_canvas() {
-	debugger
 	for (key in imgs) {
 		let img = document.createElement("img");
 		let canvas = document.createElement("canvas");
