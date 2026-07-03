@@ -4,7 +4,7 @@ body {
     color: white;
     background-color: rgb(5, 5, 5);
 
-    visibility: hidden;
+    /* visibility: hidden; */
 }
 
 a {
@@ -26,7 +26,7 @@ a:visited {
     color: rgb(196, 133, 233)
 }
 
-canvas {
+canvas#bg {
     position: fixed;
     top: 0;
     left: 0;
